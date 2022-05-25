@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    generate-ddl: 'true'
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.DerbyTenSevenDialect
+        format_sql: 'true'
+    database: default
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: ''
+    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+    generate-unique-name: 'false'
+    username: app
+    url: jdbc:derby:memory:testdb;create=true
+    continue-on-error: 'false'
+    initialize: 'false'

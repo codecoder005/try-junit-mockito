@@ -1,0 +1,4 @@
+logging:
+  file:
+    name: ./log/dev/application-dev.log
+    max-file-size: 100KB

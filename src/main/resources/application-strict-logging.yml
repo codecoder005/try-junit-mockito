@@ -1,0 +1,6 @@
+logging:
+    level:
+      org.springframework: WARN
+      com.zaxxer: WARN
+      org.apache: WARN
+      org.hibernate: WARN

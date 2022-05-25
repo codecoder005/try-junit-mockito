@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: try-junit-mockito
+  profiles:
+    active: dev, derby
