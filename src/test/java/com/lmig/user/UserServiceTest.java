@@ -19,7 +19,7 @@ public class UserServiceTest {
 
     @BeforeEach
     void setup(){
-        userService = new UserService(testUserRepository);
+        userService = new UserService(testUserRepository, null);
     }
 
     @Test
@@ -28,7 +28,7 @@ public class UserServiceTest {
         Long uid = 101L;
         String email = "doe@email";
         String name = "Doe";
-        UserEntity userEntity = new UserEntity(uid, name, email);
+        UserEntity userEntity = new UserEntity(uid, name, email, null);
         given(testUserRepository.findByName(name)).willReturn(userEntity);
         given(testUserRepository.findByNameAndEmail(name, email)).willReturn(userEntity);
 

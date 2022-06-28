@@ -22,7 +22,7 @@ public class UserRepositoryTest {
         Long uid = 101L;
         String name = "John";
         String email = "john@email";
-        UserEntity actualUser = new UserEntity(uid, name, email);
+        UserEntity actualUser = new UserEntity(uid, name, email, null);
         userRepository.save(actualUser);
 
         UserEntity responseUser = userRepository.findByName("John");
@@ -37,7 +37,7 @@ public class UserRepositoryTest {
         Long uid = 101L;
         String name = "John";
         String email = "john@email";
-        UserEntity actualUser = new UserEntity(uid, name, email);
+        UserEntity actualUser = new UserEntity(uid, name, email, null);
         userRepository.save(actualUser);
 
         UserEntity responseUser = userRepository.findByEmail(email);
@@ -52,7 +52,7 @@ public class UserRepositoryTest {
         Long uid = 101L;
         String name = "John";
         String email = "john@email";
-        UserEntity actualUser = new UserEntity(uid, name, email);
+        UserEntity actualUser = new UserEntity(uid, name, email, null);
         userRepository.save(actualUser);
 
         UserEntity responseUser = userRepository.findByNameAndEmail(name, email);
